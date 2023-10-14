@@ -1,0 +1,37 @@
+.how {
+  padding-top: 50px;
+  padding-bottom: 55px;
+}
+
+.how__title {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1280px) {
+  .how {
+    padding-bottom: 40px;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 962px) {
+  .how {
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+
+  .how__title {
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .how {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .how__title {
+    margin-bottom: 21px;
+  }
+}

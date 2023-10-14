@@ -1,0 +1,164 @@
+.feedback__title {
+  margin-bottom: 25px;
+  font-size: 48px;
+  font-weight: var(--regular);
+  line-height: 59px;
+  color: var(--light-gray);
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__input {
+  margin-bottom: 25px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: var(--regular);
+  line-height: 32px;
+  color: var(--light-gray);
+  outline: none;
+  background-color: var(--dark-gray);
+  transition: background-color .3s;
+}
+
+.feedback__input:hover,
+.feedback__input:focus {
+  background-color: var(--gray);
+}
+
+.feedback__input:focus {
+  color: var(--white);
+}
+
+.feedback__input--textarea {
+  margin-bottom: 32px;
+}
+
+.feedback__input--textarea {
+  height: 150px;
+  resize: none;
+}
+
+.feedback__input::placeholder {
+  color: var(--light-gray);
+}
+
+.feedback__form-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.feedback__submit-btn {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 269px;
+  margin-right: 22px;
+}
+
+.feedback__visual-check {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid;
+  border-radius: 2px;
+  vertical-align: middle;
+  transition: border-color .3s;
+}
+
+.feedback__visual-check::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 4px;
+  border-bottom: 2px solid var(--green);
+  border-left: 2px solid var(--green);
+  opacity: 0;
+  transition-duration: .3s;
+  transition-property: opacity, transform;
+  transform: translate(-50%, -60%) rotate(-45deg) scale(2);
+}
+
+.feedback__checkbox:checked ~ .feedback__visual-check::before {
+  opacity: 1;
+  transform: translate(-50%, -60%) rotate(-45deg) scale(1);
+}
+
+.feedback__check-text {
+  vertical-align: middle;
+}
+
+.feedback__label {
+  line-height: 1;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.feedback__label:hover {
+  color: var(--white);
+}
+
+.feedback__checkbox:focus ~ .feedback__visual-check {
+  border-color: var(--orange);
+}
+
+@media (max-width: 1440px) {
+  .feedback__submit-btn {
+    max-width: 241px;
+    max-height: 58px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .feedback__form-bottom {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .feedback__submit-btn {
+    width: auto;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  .feedback__check-text {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .feedback__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: var(--regular);
+    line-height: 29px;
+  }
+
+  .feedback__input {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 32px;
+  }
+
+  .feedback__input--textarea {
+    margin-bottom: 25px;
+  }
+}
+
+/* @media (any-hover: hover) {
+  .feedback__input:hover {
+    background-color: var(--gray);
+  }
+
+  .feedback__label:hover {
+    color: var(--white);
+  }
+} */
